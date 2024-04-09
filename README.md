@@ -44,3 +44,10 @@ En linux
 python3 visualizar_slices.py --serie 36
 ```
 El valor `36` es el número de serie que se desea visualizar, puedes seleccionar cualquier número de serie presente en la carpeta `inferences` seg_00036.npy, seg_00042.npy, ... Solo poner el entero sin los ceros a la izquierda.
+
+## Interfaz de visualización
+El script anterior levantará una interfaz de visualización como esta:
+
+![Interfaz de visualización](interfaz.jpg)
+
+Se puede pasar de un slice a otro usando las teclas arriba y abajo, o con el scroll del ratón. 
