@@ -1,5 +1,6 @@
 # Visualizar inferencias
-## Clonar el proyecto usando 
+## Clonar el proyecto 
+Levantar un terminal y correr
 ```bash
 git clone https://github.com/GBM-images-research/visualizar_inferencia.git
 cd visualizar_inferencia
