@@ -1,9 +1,12 @@
 # Visualizar inferencias
-- Clonar el proyecto usando 
+## Clonar el proyecto usando 
 ```bash
 git clone https://github.com/GBM-images-research/visualizar_inferencia.git
 cd visualizar_inferencia
 ```
+- Si no se tiene git instalado descargar y descomprimir la carpeta de proyecto con este enlace https://github.com/GBM-images-research/visualizar_inferencia/archive/refs/heads/main.zip
+
+## Descargar los archivos de datos
 - Descargar el archivo `inferences.zip` en este link https://drive.google.com/file/d/1voFM5cCB4QvCoFZCncFn6aGfU8V2VlIM/view?usp=drive_link
 - Descomprimirla en la carpeta raiz del proyecto de modo que quede el path `visualizar_inferencia/inferences`
 - Descargar el archivo `Datset.zip` en este link https://drive.google.com/file/d/1kSq5qhkkc_H3AadspoddtbMi8-uECc6I/view?usp=drive_link
