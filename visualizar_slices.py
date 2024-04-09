@@ -13,17 +13,17 @@ def imprimir_inferencia(serie, seg_out, seg, slice, recurrence=False):
         s = 2
         path = os.path.join(
             "./Dataset",
-            f"Dataset_106_30_casos/test/images/images_structural/UPENN-GBM-{serie}_11/UPENN-GBM-{serie}_11_T1GD.nii.gz",
+            f"test/images/images_structural/UPENN-GBM-{serie}_11/UPENN-GBM-{serie}_11_T1GD.nii.gz",
         )
         path_recurrence = os.path.join(
             "./Dataset",
-            f"Dataset_106_30_casos/recurrence/images_structural/UPENN-GBM-{serie}_21/UPENN-GBM-{serie}_21_T1GD.nii.gz",
+            f"recurrence/images_structural/UPENN-GBM-{serie}_21/UPENN-GBM-{serie}_21_T1GD.nii.gz",
         )
     else:
         s = 1
         path = os.path.join(
             "./Dataset",
-            f"Dataset_106_30_casos/test/images/images_structural/UPENN-GBM-{serie}_{s}1/UPENN-GBM-{serie}_{s}1_T1GD.nii.gz",
+            f"/test/images/images_structural/UPENN-GBM-{serie}_{s}1/UPENN-GBM-{serie}_{s}1_T1GD.nii.gz",
         )
 
     img_add = path
@@ -32,12 +32,12 @@ def imprimir_inferencia(serie, seg_out, seg, slice, recurrence=False):
 
     label_add = os.path.join(
         "./Dataset",
-        f"Dataset_106_30_casos/test/labels/UPENN-GBM-{serie}_11_segm.nii.gz",
+        f"test/labels/UPENN-GBM-{serie}_11_segm.nii.gz",
     )
     if not os.path.exists(label_add):
         label_add = os.path.join(
             "./Dataset",
-            f"Dataset_106_30_casos/test/labels/UPENN-GBM-{serie}_11_automated_approx_segm.nii.gz",
+            f"test/labels/UPENN-GBM-{serie}_11_automated_approx_segm.nii.gz",
         )
 
     img = nib.load(img_add).get_fdata()
@@ -120,10 +120,8 @@ def main():
     parser.add_argument("--serie", type=int, default=36, help="Número de serie")
     args = parser.parse_args()
 
-    seg_out = np.load(
-        f"trained_models/inferences/seg_out_{str(args.serie).zfill(5)}.npy"
-    )
-    seg = np.load(f"trained_models/inferences/seg_{str(args.serie).zfill(5)}.npy")
+    seg_out = np.load(f"inferences/seg_out_{str(args.serie).zfill(5)}.npy")
+    seg = np.load(f"inferences/seg_{str(args.serie).zfill(5)}.npy")
     slice = 70  # Slice inicial
 
     imprimir_inferencia(
