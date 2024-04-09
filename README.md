@@ -2,10 +2,14 @@
 - Clonar el proyecto usando 
 ```bash
 git clone https://github.com/GBM-images-research/visualizar_inferencia.git
+cd visualizar_inferencia
 ```
-- Descargar la carpeta `inferences.zip` en este link https://drive.google.com/file/d/1voFM5cCB4QvCoFZCncFn6aGfU8V2VlIM/view?usp=drive_link
+- Descargar el archivo `inferences.zip` en este link https://drive.google.com/file/d/1voFM5cCB4QvCoFZCncFn6aGfU8V2VlIM/view?usp=drive_link
 - Descomprimirla en la carpeta raiz del proyecto de modo que quede el path `visualizar_inferencia/inferences`
-- Generar un venv.
+- Descargar el archivo `Datset.zip` en este link https://drive.google.com/file/d/1kSq5qhkkc_H3AadspoddtbMi8-uECc6I/view?usp=drive_link
+- Descomprimirla en la carpeta raiz del proyecto de modo que quede el path `visualizar_inferencia/Dataset/test` y `visualizar_inferencia/Dataset/recurrence`
+
+## Generar un entorno virtual .venv
 
 En window 
 ```bash 
@@ -36,4 +40,4 @@ En linux
 ```bash
 python3 visualizar_slices.py --serie 36
 ```
-`36`es el número de serie que se desea visualizar, puedes seleccionar cualquier número de serie presente en la carpeta `inferences` seg_00036.npy, seg_00042.npy, ... Solo poner el entero sin los ceros a la izquierda.
+El valor `36` es el número de serie que se desea visualizar, puedes seleccionar cualquier número de serie presente en la carpeta `inferences` seg_00036.npy, seg_00042.npy, ... Solo poner el entero sin los ceros a la izquierda.
